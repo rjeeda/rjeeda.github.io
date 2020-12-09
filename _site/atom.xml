@@ -4,7 +4,7 @@
  <title>Microtubule Catastrophe</title>
  <link href="/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2020-12-09T13:13:58-08:00</updated>
+ <updated>2020-12-09T13:53:29-08:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rashi Jeeda</name>
@@ -35,7 +35,14 @@
 Microtubules, cellular filaments composed of monomeric tubulin subunits, play key roles in the cytoskeletal structure and internal organization of cells. They are known to undergo periods of growth and shortening; the conversion from growth to shortening consists of rapid repolymerization of tubulin known as catastrophe. The dynamics of catastrophe were measured by Gardner et. al. to explore how regulatory proteins modulate this process.
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;We found that there is little difference in catastrophe dynamics for GFP-labeled tubulin and non-labeled tubulin, and conclude that an exponential model best describes catastrophe dynamics. We will discuss statistical methods used for the analysis of this data.&lt;/p&gt;
+&lt;p&gt;We found that there is little difference in catastrophe dynamics for GFP-labeled tubulin and non-labeled tubulin, and conclude that an exponential model best describes catastrophe dynamics. Here, we discuss statistical methods used for the analysis of this data.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;For each plot and analysis made, we include an &lt;b&gt;example&lt;/b&gt; html Jupyter notebook with discussion of how we used our analysis package. The specific modules used for each plot are linked as &lt;b&gt;source code&lt;/b&gt;. Full, executable notebooks of the tutorials can be found at the end of this page and the complete analysis package can be found in the GitHub repository.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\cdot \cdot \cdot&lt;/script&gt;
 
@@ -1170,7 +1177,7 @@ Microtubules, cellular filaments composed of monomeric tubulin subunits, play ke
 &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 &lt;center&gt;&lt;b&gt;Fig. 2&lt;/b&gt;: Confidence intervals for time to catastrophe derived from bootstrapping.&lt;br /&gt;
-&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;code:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
+&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part1.html&quot;&gt;&lt;code&gt;tut1.html&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/bootstrapping.py&quot;&gt;&lt;code&gt;bootstrapping.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
 &lt;p&gt;There is also strong overlap in the confidence intervals, suggesting that the labeled and unlabeled tubulin have similar times to catastrophe. We also computed confidence intervals according to the DKW inequality.&lt;/p&gt;
@@ -1731,7 +1738,7 @@ Microtubules, cellular filaments composed of monomeric tubulin subunits, play ke
 &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 &lt;center&gt;&lt;b&gt;Fig. 3&lt;/b&gt;: Confidence intervals for time to catastrophe derived from DKW inequality.&lt;br /&gt;
-&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;code:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
+&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part1.html&quot;&gt;&lt;code&gt;tut1.html&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/bootstrapping.py&quot;&gt;&lt;code&gt;bootstrapping.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
 &lt;p&gt;This inequality acts as a bound for the confidence interval. We saw that our bootstrapping confidence intervals lie well within these bounds.&lt;/p&gt;
@@ -1749,12 +1756,12 @@ Microtubules, cellular filaments composed of monomeric tubulin subunits, play ke
 &lt;p&gt;We used bootstrapping to generate “trials” to compare to our test set, assuming that all sampled data sets come from the same generative distribution as the test set. By computing the test statistic for each of these and comparing it to the test statistic for our particular data set, we can obtain a p-value. The p-value represents the probability of getting a test statistic at least as extreme as the one in our sample when performing many trials or runs of the experiment. We obtained a p-value of 0.8, which means that the value of the KS test statistic for bootstrapped samples is as extreme as that for the actual experiment 80% of the time. This led us to conclude that we fail to reject the null hypothesis that there is no difference in the distribution of the two conditions.
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part1.html&quot;&gt;&lt;code&gt;tut1.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;So all in all, it’s pretty likely that the catastrophe times for labeled and unlabled tubulin come from the same generative distribution.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;So, all in all, it’s pretty likely that the catastrophe times for labeled and unlabled tubulin come from the same generative distribution.&lt;/b&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1777,6 +1784,8 @@ We find that the PDF simplifies to
 &lt;br /&gt;&lt;/p&gt;
 &lt;center&gt; $$f(t;\beta_1, \beta_2) = \frac{\beta_1 \beta_2}{\beta_2 - \beta_1} (e^{-\beta_1 t} - e^{-\beta_2 t})$$&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;More detailed information about considerations we made when doing calculations for this model can be found in &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.html&quot;&gt;&lt;code&gt;tut2.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;maximum-likelihood-estimation&quot;&gt;Maximum likelihood estimation&lt;/h3&gt;
 
@@ -2340,8 +2349,8 @@ We find that the PDF simplifies to
 &lt;/html&gt;
 &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
-&lt;center&gt;&lt;b&gt;Fig. 2&lt;/b&gt;: Confidence intervals for time to catastrophe derived from bootstrapping.&lt;br /&gt;
-&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;code:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
+&lt;center&gt;&lt;b&gt;Fig. 4&lt;/b&gt;: Experimental vs Theoretical ECDFs of Catastrophe Times. Experimental shown with interval; theoretical overlaid as line.&lt;br /&gt;
+&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.html&quot;&gt;&lt;code&gt;tut2.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/MLE_analysis.py&quot;&gt;&lt;code&gt;MLE_analysis.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
 &lt;p&gt;This can tell whether the model is reasonable, but does not necessarily give us enough information to determine which model is better.&lt;/p&gt;
@@ -2908,8 +2917,8 @@ We find that the PDF simplifies to
 &lt;/html&gt;
 &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
-&lt;center&gt;&lt;b&gt;Fig. 3&lt;/b&gt;: Times to catastrophe for various concentrations of tubulin. Presented as ECDF (left) and strip plot (right).&lt;br /&gt;
-&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;code:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
+&lt;center&gt;&lt;b&gt;Fig. 5&lt;/b&gt;: Times to catastrophe for various concentrations of tubulin. Presented as ECDF (left) and strip plot (right).&lt;br /&gt;
+&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.html&quot;&gt;&lt;code&gt;tut2.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/exploratory_analysis.py&quot;&gt;&lt;code&gt;exploratory_analysis.py&lt;/code&gt;&lt;/a&gt; &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
 &lt;p&gt;We used three different metrics to compare the two models. The first of these, the QQ plot, uses quantiles of the experimental dataset, overlaid with the theoretical results using our model, to visualize how well our models fit the data. If our model is mostly contained within the quantiles, that implies it is a good fit.&lt;/p&gt;
@@ -3470,8 +3479,8 @@ We find that the PDF simplifies to
 &lt;/html&gt;
 &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
-&lt;center&gt;&lt;b&gt;Fig. 3&lt;/b&gt;: Times to catastrophe for various concentrations of tubulin. Presented as ECDF (left) and strip plot (right).&lt;br /&gt;
-&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;code:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
+&lt;center&gt;&lt;b&gt;Fig. 6&lt;/b&gt;: Q-Q plot for each theoretical model.&lt;br /&gt;
+&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.html&quot;&gt;&lt;code&gt;tut2.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/model_assessment.py&quot;&gt;&lt;code&gt;model_assessment.py&lt;/code&gt;&lt;/a&gt; &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
 &lt;p&gt;We also generate predictive regression plots for each model. Predictive ECDFs overlay the results of the experimental ECDF with the results we would get using each of our models. The two curves should be aligned very closely if the model fits the data.&lt;/p&gt;
@@ -4032,8 +4041,8 @@ We find that the PDF simplifies to
 &lt;/html&gt;
 &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
-&lt;center&gt;&lt;b&gt;Fig. 3&lt;/b&gt;: Predictive ECDFs for each theoretical model.&lt;br /&gt;
-&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;code:&lt;/b&gt; &lt;a href=&quot;../../../../code/lol.py&quot;&gt;&lt;code&gt;lol.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
+&lt;center&gt;&lt;b&gt;Fig. 7&lt;/b&gt;: Predictive ECDFs for each theoretical model.&lt;br /&gt;
+&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.html&quot;&gt;&lt;code&gt;tut2.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/model_assessment.py&quot;&gt;&lt;code&gt;model_assessment.py&lt;/code&gt;&lt;/a&gt; &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
 &lt;p&gt;For a more quantitative metric, we also calculated the Akaike Information Criterion for each of our datasets, which is found using the log likelihood value for the parameters. This criterion can loosely be interpreted as a distance metric between the theoretical and empirical distributions, so a smaller value implies a better fit. The AIC can be calculated as&lt;/p&gt;
@@ -4043,6 +4052,8 @@ We find that the PDF simplifies to
 &lt;p&gt;for a set of parameters &lt;script type=&quot;math/tex&quot;&gt;\theta&lt;/script&gt; with MLE &lt;script type=&quot;math/tex&quot;&gt;\theta^*&lt;/script&gt; and a model with log-likelihood &lt;script type=&quot;math/tex&quot;&gt;\ell(\theta;\text{data})&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; is the number of free parameters.&lt;/p&gt;
 
 &lt;p&gt;For the exponential distribution, we found that AIC = 9327.39, and for the gamma distribution, AIC = 9278.35.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.html&quot;&gt;&lt;code&gt;tut2.py&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -4064,7 +4075,16 @@ We find that the PDF simplifies to
 &lt;a href=&quot;https://s3.amazonaws.com/bebi103.caltech.edu/data/gardner_mt_catastrophe_only_tubulin.csv&quot;&gt;Times to Catastrophe for Various Concentrations of Tubulin&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;A walkthrough of the analysis shown above is available in two parts in the following Jupyter notebooks, along with tips and examples for using the package created for the analysis pipeline.&lt;/p&gt;
+    &lt;p&gt;A walkthrough of the analysis shown above is available in two parts in the following Jupyter notebooks, along with tips and examples for using the package created for the analysis pipeline.
+&lt;br /&gt;
+&lt;a href=&quot;../../../../code/MCAT_Tutorial_Part1.html&quot;&gt;&lt;code&gt;MCAT_Tutorial_Part1.html&lt;/code&gt;&lt;/a&gt; | &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part1.ipynb&quot;&gt;&lt;code&gt;MCAT_Tutorial_Part1.ipynb&lt;/code&gt;&lt;/a&gt; (Experimental Dynamics)
+&lt;br /&gt;
+&lt;a href=&quot;../../../../code/MCAT_Tutorial_Part1.html&quot;&gt;&lt;code&gt;MCAT_Tutorial_Part1.html&lt;/code&gt;&lt;/a&gt; | &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.ipynb&quot;&gt;&lt;code&gt;MCAT_Tutorial_Part2.ipynb&lt;/code&gt;&lt;/a&gt; (Modeling Catastrophe)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The analysis package can be downloaded here:
+&lt;br /&gt;
+&lt;a href=&quot;../../../../MCAT_pkg&quot;&gt;&lt;code&gt;MCAT_pkg&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;The original paper can be found here:
@@ -4072,7 +4092,7 @@ We find that the PDF simplifies to
 &lt;a href=&quot;https://www.cell.com/cell/fulltext/S0092-8674(11)01287-6?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867411012876%3Fshowall%3Dtrue&quot;&gt;Gardner et. al. 2011&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;All other code, figures shown above, and the analysis package can be found in the GitHub repository for this website:
+    &lt;p&gt;All other code and figures shown above can be found in the GitHub repository for this website:
 &lt;br /&gt;
 &lt;a href=&quot;https://github.com/rjeeda/rjeeda.github.io&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
@@ -4084,7 +4104,9 @@ We find that the PDF simplifies to
 &lt;hr /&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;We thank the publishers of Gardner et. al. for sharing their data, the BeBi103 TA’s for their guidance, the makers of Poole for this website template, Rosita Fu and Griffin Chure for design inspiration, and of course, Justin Bois for his assistance, insight, and useful code!&lt;/p&gt;
+&lt;p&gt;We thank the publishers of Gardner et. al. for sharing their data, the BeBi103 TA’s for their guidance, the makers of Poole for this website template, &lt;a href=&quot;https://github.com/atisor73&quot;&gt;Rosita Fu&lt;/a&gt; and &lt;a href=&quot;https://github.com/gchure&quot;&gt;Griffin Chure&lt;/a&gt; for design inspiration, and of course, &lt;a href=&quot;https://github.com/justinbois&quot;&gt;Justin Bois&lt;/a&gt; for his assistance, insight, and useful code!&lt;/p&gt;
+
+&lt;p&gt;Website header generated using &lt;a href=&quot;https://ccsb.scripps.edu/cellpaint/&quot;&gt;CellPAINT 2.0.&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
