@@ -3,7 +3,7 @@ title: Microtubule Catastrophe
 tagline: BEBi103a | Fall 2020
 url: https://getpoole.com
 paginate: 1
-baseurl: "mcat"
+baseurl: ""
 permalink: pretty
 
 # Gems
