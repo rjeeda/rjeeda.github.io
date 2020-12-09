@@ -9,25 +9,25 @@ title: Introduction
 
 <header>
 <img src="../../../../microtubule.png" alt="" width="1000"
-         height="200">
+         height="250">
 </header>
 # Microtubule Catastrophe
-#### Rashi Jeeda, Joeyta Banerjee, Mei Yi You | BE/Bi103a Fall 2020
+#### Rashi Jeeda, Joeyta Banerjee, Mei Yi You | BE/Bi103a Fall 2020 | <a href="https://github.com/rjeeda/rjeeda.github.io">View on GitHub</a>
 
 $$\cdot \cdot \cdot$$
 
 ## Abstract
 ---
 <br>
-Microtubules, cellular filaments composed of monomeric tubulin subunits, play key roles in the cytoskeletal structure and internal organization of cells. They are known to undergo periods of growth and shortening; the conversion from growth to shortening consists of rapid repolymerization of tubulin known as catastrophe. The dynamics of catastrophe were measured by Gardner et. al. to explore how regulatory proteins modulate this process.
+Microtubules, cellular filaments composed of monomeric tubulin subunits, play key roles in the cytoskeletal structure and internal organization of cells. They are known to undergo periods of growth and shortening; the conversion from growth to shortening consists of rapid depolymerization of tubulin known as catastrophe. The dynamics of catastrophe were measured by Gardner et. al. to explore how regulatory proteins modulate this process.
 <br>
 
-We found that there is little difference in catastrophe dynamics for GFP-labeled tubulin and non-labeled tubulin, and conclude that an exponential model best describes catastrophe dynamics. Here, we discuss statistical methods used for the analysis of this data.
+We found that there is little difference in catastrophe dynamics for fluorescence-labeled tubulin and non-labeled tubulin, and concluded that an exponential model best describes catastrophe dynamics. Here, we discuss statistical methods used for the analysis of this data.
 
 ---
 <br>
 
-For each plot and analysis made, we include an <b>example</b> html Jupyter notebook with discussion of how we used our analysis package. The specific modules used for each plot are linked as <b>source code</b>. Full, executable notebooks of the tutorials can be found at the end of this page and the complete analysis package can be found in the GitHub repository.
+For each plot and analysis made, we include an <b>example</b> html Jupyter notebook with discussion of how we used our analysis package. The specific modules used for each plot are linked as <b>source code</b>. Full, executable notebooks of the tutorials can be found at the end of this page, and the complete analysis package can be found in the GitHub repository.
 
 ---
 
@@ -43,7 +43,7 @@ The authors of Gardner et. al. were interested in measuring the time between the
 Thus, it's possible that fluorescent molecules could impact the dynamics of tubulin interactions in microtubule growth and catastrophe. In order to control for this possibility, the authors measured times to catastrophe using fluorescent labels as well as using differential interference contrast (DIC) microscopy. The microscopy served as a control to ensure that times to catastrophe were not significantly affected by the use of fluorescent markers and exposure to laser light.
 <br>
 
-We visualized the times to catastrophe for both cases to see if there was a noticable difference. We included 95% confidence intervals to visualize the range of possible ECDFs for time to catastrophe for each case, as determined from bootstrap replicates.
+We visualized the times to catastrophe for both cases to see if there was a noticeable difference. We included 95% confidence intervals to visualize the range of possible ECDFs for time to catastrophe for each case, as determined from bootstrap replicates.
 
 <center>$$\cdot$$</center>
 <center>{% include label_comparison_ecdf.html %}</center>
@@ -63,7 +63,7 @@ Due to the strong overlap, it didn't seem as though there was a significant diff
 <b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part1.html"><code>tut1.html</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/bootstrapping.py"><code>bootstrapping.py</code></a>  </center>
 <center>$$\cdot$$</center>
 
-There is also strong overlap in the confidence intervals, suggesting that the labeled and unlabeled tubulin have similar times to catastrophe. We also computed confidence intervals according to the DKW inequality.
+There is also strong overlap in the confidence intervals, suggesting that the labeled and unlabeled tubulin have similar times to catastrophe. We also computed confidence intervals according to the DKW (Dvoretzky-Kiefer-Wolfowitz) inequality.
 <center>$$\cdot$$</center>
 <center>{% include label_comparison_DKW.html %}</center>
 <center>$$\cdot$$</center>
@@ -80,7 +80,7 @@ $$\cdot \cdot \cdot$$
 
 ### Hypothesis testing
 
-To test whether the distribution of catastrophe times for microtubules with labeled tubulin is the same as that for unlabeled tubulin, we performed a hypothesis test by testing against the null hypothesis that there is no difference between the two datasets. For our analysis, we chose the Kolmogorov Smirnov test statistic, which compares two different distributions by providing a metric that combines differences in center and spread.
+To test whether the distribution of catastrophe times for microtubules with labeled tubulin is the same as that for unlabeled tubulin, we performed a hypothesis test by testing against the null hypothesis that there is no difference between the two datasets. For our analysis, we chose the Kolmogorov Smirnov test statistic, which compares two different distributions by providing a metric that combines differences in center and spread. We use scipy to calculate the test statistic, which we use in our bootstrapping approach to obtain a p-value.
 
 The null hypothesis we are testing is as follows:
 
@@ -94,7 +94,7 @@ We used bootstrapping to generate “trials” to compare to our test set, assum
 ---
 <br>
 
-<b>So, all in all, it's pretty likely that the catastrophe times for labeled and unlabled tubulin come from the same generative distribution.</b>
+<b>So, all in all, it's pretty likely that the catastrophe times for labeled and unlabeled tubulin come from the same generative distribution. In the subsequent analysis, we hold this assumption. </b>
 
 <br>
 
@@ -105,14 +105,14 @@ $$\cdot \cdot \cdot$$
 ---
 ### Could the data be Gamma distributed?
 
-The authors of Gardner et. al. assume that the times to catastrophe were Gamma distributed. Taking a look at the handy <a href="https://distribution-explorer.github.io/">distribution explorer</a>, we can compare the story of microtubule growth to the story behind the Gamma distribution. The Gamma distribution is the amount of time we have to wait for n arrivals of a Poisson process. In this case, catastrophe is a multi-step process in which each sub-processes can be thought of as a Poisson process. So, the time for each sub-process to occur is exponentially distributed. The time you need to wait for all the multi-step processes to occur will then be Gamma distributed. The number of arrivals is given by the parameter $$\alpha$$ while the time for all arrivals to occur is given by $$\beta$$. The PDF is given by
+The authors of Gardner et. al. assume that the times to catastrophe are Gamma distributed. Taking a look at the handy <a href="https://distribution-explorer.github.io/">distribution explorer</a>, we can compare the story of microtubule growth to the story behind the Gamma distribution. The Gamma distribution is the amount of time we have to wait for n arrivals of a Poisson process. In this case, catastrophe is a multi-step process in which each sub-process can be thought of as a Poisson process. So, the time for each sub-process to occur is exponentially distributed. The time you need to wait for all the multi-step processes to occur will then be Gamma distributed. The number of arrivals is given by the parameter $$\alpha$$ while the time for all arrivals to occur is given by $$\beta$$. The PDF is given by
 
 $$f(y; \alpha, \beta) = \frac{1}{\Gamma(\alpha)} \frac{(\beta y)^{\alpha}}{y}e^{-\beta y}$$
 
 
 ### An alternative hypothesis
 
-Alternatively, we could consider that two biochemical processes have to happen in succession in order to trigger a catastrophe. We can model each of these processes as a Poisson process. The rate of arrivals, which corresponds biologically to the rate of the first biochemical process, is described by the variable $$\beta_1$$ while the other is described by $$\beta_2$$. In this successive Poisson model, note that the value of $$\beta_2$$ doesn't depend on the value of $$\beta_1$$. In order to simulate the successive Poisson process model, we will add the times generated by the second Poisson process to those generated by the first. This works because once we have sampled a time for the first process from the exponential distribution, it essentially becomes our new zero point when sampling for the time taken for the second process. Thus, the time taken to complete both processes will simply be the sum of the time of the first process and the time of the second process.
+Alternatively, we could consider that two biochemical processes have to happen in succession in order to trigger a catastrophe. We can model each of these processes as a Poisson process. The rate of arrivals, which corresponds biologically to the rate of the first biochemical process, is described by the variable $$\beta_1$$ while the other is described by $$\beta_2$$. In this successive Poisson model, note that the value of $$\beta_2$$ doesn't depend on the value of $$\beta_1$$. In order to simulate the model, we will add the times generated by the second Poisson process to those generated by the first. This works because once we have sampled a time for the first process from the exponential distribution, it essentially becomes our new zero point when sampling for the time taken for the second process.
 
 We can analytically calculate the probability density function (PDF) of the distribution matching the story we told.
 We find that the PDF simplifies to
@@ -126,7 +126,7 @@ More detailed information about considerations we made when doing calculations f
 
 For each of these potential models (gamma and exponential), we need to determine the parameters that will allow the model to best fit our data. For the gamma distribution, this is ɑ and β, and for the exponential distribution, it is the two successive values of beta. We determine these estimates by maximizing the log likelihood for the parameters given our data set, which is the same as maximizing the likelihood but is computationally simpler. Rather than determining the parameters analytically, we generated estimates using bootstrapping by maximizing the log likelihood over multiple trials and averaging over the individual results.
 
-With the parameters estimates gained from maximum likelihood estimation, we can generate data sets from the appropriate distribution using these parameters and compare the ECDF to the experimental ECDF to loosely estimate how well our model fits the data.
+With the parameter estimates gained from maximum likelihood estimation, we can generate data sets from the appropriate distribution using these parameters and compare the theoretical ECDF to the experimental ECDF to loosely estimate how well our model fits the data.
 
 
 <center>$$\cdot$$</center>
@@ -136,13 +136,13 @@ With the parameters estimates gained from maximum likelihood estimation, we can 
 <b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/MLE_analysis.py"><code>MLE_analysis.py</code></a>  </center>
 <center>$$\cdot$$</center>
 
-This can tell whether the model is reasonable, but does not necessarily give us enough information to determine which model is better.
+At first glance, it seems as though the Gamma distribution model aligns better with our results. However, this can only tell us whether the model is reasonable, but does not necessarily give us enough information to determine which model is better.
 
 $$\cdot \cdot \cdot$$
 
 ### Model comparison
 
-We explored the question of which model was preferred by solely focusing on the data from the fluorescent tagged tubulin, since we found through hypothesis testing that there was not a significant difference between the two conditions. Within this experimental condition, the experimenters also repeated the process for multiple different concentrations of tubulin.
+We explored the question of which model was preferred by solely focusing on the data from the fluorescent tagged tubulin, since we found through hypothesis testing that there was not a significant difference between the two conditions. Within this experimental condition, the experimenters also repeated the process for multiple different concentrations of tubulin. We show the times to catastrophe for each concentration below.
 
 
 <center>$$\cdot$$</center>
@@ -152,8 +152,9 @@ We explored the question of which model was preferred by solely focusing on the 
 <b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/exploratory_analysis.py"><code>exploratory_analysis.py</code></a> </center>
 <center>$$\cdot$$</center>
 
+Overall, each of the individual concentrations seem to behave very similarly, with the highest concentration having the longest time to catastrophe on average.
 
-We used three different metrics to compare the two models. The first of these, the QQ plot, uses quantiles of the experimental dataset, overlaid with the theoretical results using our model, to visualize how well our models fit the data. If our model is mostly contained within the quantiles, that implies it is a good fit.
+We used three different metrics to compare the two models. The first of these, the QQ plot, plots quantiles of the experimental dataset against quantiles of the theoretical dataset. If the two datasets come from the same distribution, the line generated in the plot will appear mostly straight.
 
 
 <center>$$\cdot$$</center>
@@ -163,16 +164,18 @@ We used three different metrics to compare the two models. The first of these, t
 <b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/model_assessment.py"><code>model_assessment.py</code></a> </center>
 <center>$$\cdot$$</center>
 
-We also generate predictive regression plots for each model. Predictive ECDFs overlay the results of the experimental ECDF with the results we would get using each of our models. The two curves should be aligned very closely if the model fits the data.
+We also generated predictive ECDF plots for each model. Predictive ECDFs overlay the results of the experimental ECDF with the results we would get using each of our models. The two curves should be aligned very closely if the model fits the data.
 
 <center>$$\cdot$$</center>
-<center>{% include pred_reg.html %}</center>
+<center>{% include pred_ecdf.html %}</center>
 <center>$$\cdot$$</center>
 <center><b>Fig. 7</b>: Predictive ECDFs for each theoretical model.<br>
 <b>example:</b> <a href="../../../../code/MCAT_Tutorial_Part2.html"><code>tut2.py</code></a> | <b>source code:</b> <a href="../../../../MCAT_pkg/MCAT_pkg/model_assessment.py"><code>model_assessment.py</code></a> </center>
 <center>$$\cdot$$</center>
 
-For a more quantitative metric, we also calculated the Akaike Information Criterion for each of our datasets, which is found using the log likelihood value for the parameters. This criterion can loosely be interpreted as a distance metric between the theoretical and empirical distributions, so a smaller value implies a better fit. The AIC can be calculated as
+Here, we see that the Gamma distribution is a much better fit for the experimental results.
+
+For a more quantitative metric, we also calculated the Akaike Information Criterion for each of our models, which is found using the log likelihood value for the parameters. This criterion can loosely be interpreted as a distance metric between the theoretical and empirical distributions, so a smaller value implies a better fit. The AIC can be calculated as
 
 $$\text{AIC} = -2\ell(\theta^*;\text{data}) + 2p$$
 

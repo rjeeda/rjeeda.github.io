@@ -4,7 +4,7 @@
  <title>Microtubule Catastrophe</title>
  <link href="/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2020-12-09T13:53:29-08:00</updated>
+ <updated>2020-12-09T14:31:23-08:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Rashi Jeeda</name>
@@ -22,25 +22,25 @@
 &lt;/head&gt;
 
 &lt;header&gt;
-&lt;img src=&quot;../../../../microtubule.png&quot; alt=&quot;&quot; width=&quot;1000&quot; height=&quot;200&quot; /&gt;
+&lt;img src=&quot;../../../../microtubule.png&quot; alt=&quot;&quot; width=&quot;1000&quot; height=&quot;250&quot; /&gt;
 &lt;/header&gt;
 &lt;h1 id=&quot;microtubule-catastrophe&quot;&gt;Microtubule Catastrophe&lt;/h1&gt;
-&lt;h4 id=&quot;rashi-jeeda-joeyta-banerjee-mei-yi-you--bebi103a-fall-2020&quot;&gt;Rashi Jeeda, Joeyta Banerjee, Mei Yi You | BE/Bi103a Fall 2020&lt;/h4&gt;
+&lt;h4 id=&quot;rashi-jeeda-joeyta-banerjee-mei-yi-you--bebi103a-fall-2020--view-on-github&quot;&gt;Rashi Jeeda, Joeyta Banerjee, Mei Yi You | BE/Bi103a Fall 2020 | &lt;a href=&quot;https://github.com/rjeeda/rjeeda.github.io&quot;&gt;View on GitHub&lt;/a&gt;&lt;/h4&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\cdot \cdot \cdot&lt;/script&gt;
 
 &lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;br /&gt;
-Microtubules, cellular filaments composed of monomeric tubulin subunits, play key roles in the cytoskeletal structure and internal organization of cells. They are known to undergo periods of growth and shortening; the conversion from growth to shortening consists of rapid repolymerization of tubulin known as catastrophe. The dynamics of catastrophe were measured by Gardner et. al. to explore how regulatory proteins modulate this process.
+Microtubules, cellular filaments composed of monomeric tubulin subunits, play key roles in the cytoskeletal structure and internal organization of cells. They are known to undergo periods of growth and shortening; the conversion from growth to shortening consists of rapid depolymerization of tubulin known as catastrophe. The dynamics of catastrophe were measured by Gardner et. al. to explore how regulatory proteins modulate this process.
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;We found that there is little difference in catastrophe dynamics for GFP-labeled tubulin and non-labeled tubulin, and conclude that an exponential model best describes catastrophe dynamics. Here, we discuss statistical methods used for the analysis of this data.&lt;/p&gt;
+&lt;p&gt;We found that there is little difference in catastrophe dynamics for fluorescence-labeled tubulin and non-labeled tubulin, and concluded that an exponential model best describes catastrophe dynamics. Here, we discuss statistical methods used for the analysis of this data.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;For each plot and analysis made, we include an &lt;b&gt;example&lt;/b&gt; html Jupyter notebook with discussion of how we used our analysis package. The specific modules used for each plot are linked as &lt;b&gt;source code&lt;/b&gt;. Full, executable notebooks of the tutorials can be found at the end of this page and the complete analysis package can be found in the GitHub repository.&lt;/p&gt;
+&lt;p&gt;For each plot and analysis made, we include an &lt;b&gt;example&lt;/b&gt; html Jupyter notebook with discussion of how we used our analysis package. The specific modules used for each plot are linked as &lt;b&gt;source code&lt;/b&gt;. Full, executable notebooks of the tutorials can be found at the end of this page, and the complete analysis package can be found in the GitHub repository.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -56,7 +56,7 @@ Microtubules, cellular filaments composed of monomeric tubulin subunits, play ke
 &lt;p&gt;Thus, it’s possible that fluorescent molecules could impact the dynamics of tubulin interactions in microtubule growth and catastrophe. In order to control for this possibility, the authors measured times to catastrophe using fluorescent labels as well as using differential interference contrast (DIC) microscopy. The microscopy served as a control to ensure that times to catastrophe were not significantly affected by the use of fluorescent markers and exposure to laser light.
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;We visualized the times to catastrophe for both cases to see if there was a noticable difference. We included 95% confidence intervals to visualize the range of possible ECDFs for time to catastrophe for each case, as determined from bootstrap replicates.&lt;/p&gt;
+&lt;p&gt;We visualized the times to catastrophe for both cases to see if there was a noticeable difference. We included 95% confidence intervals to visualize the range of possible ECDFs for time to catastrophe for each case, as determined from bootstrap replicates.&lt;/p&gt;
 
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 &lt;center&gt;
@@ -1180,7 +1180,7 @@ Microtubules, cellular filaments composed of monomeric tubulin subunits, play ke
 &lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part1.html&quot;&gt;&lt;code&gt;tut1.html&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/bootstrapping.py&quot;&gt;&lt;code&gt;bootstrapping.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
-&lt;p&gt;There is also strong overlap in the confidence intervals, suggesting that the labeled and unlabeled tubulin have similar times to catastrophe. We also computed confidence intervals according to the DKW inequality.&lt;/p&gt;
+&lt;p&gt;There is also strong overlap in the confidence intervals, suggesting that the labeled and unlabeled tubulin have similar times to catastrophe. We also computed confidence intervals according to the DKW (Dvoretzky-Kiefer-Wolfowitz) inequality.&lt;/p&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 &lt;center&gt;
 
@@ -1747,7 +1747,7 @@ Microtubules, cellular filaments composed of monomeric tubulin subunits, play ke
 
 &lt;h3 id=&quot;hypothesis-testing&quot;&gt;Hypothesis testing&lt;/h3&gt;
 
-&lt;p&gt;To test whether the distribution of catastrophe times for microtubules with labeled tubulin is the same as that for unlabeled tubulin, we performed a hypothesis test by testing against the null hypothesis that there is no difference between the two datasets. For our analysis, we chose the Kolmogorov Smirnov test statistic, which compares two different distributions by providing a metric that combines differences in center and spread.&lt;/p&gt;
+&lt;p&gt;To test whether the distribution of catastrophe times for microtubules with labeled tubulin is the same as that for unlabeled tubulin, we performed a hypothesis test by testing against the null hypothesis that there is no difference between the two datasets. For our analysis, we chose the Kolmogorov Smirnov test statistic, which compares two different distributions by providing a metric that combines differences in center and spread. We use scipy to calculate the test statistic, which we use in our bootstrapping approach to obtain a p-value.&lt;/p&gt;
 
 &lt;p&gt;The null hypothesis we are testing is as follows:&lt;/p&gt;
 
@@ -1761,7 +1761,7 @@ Microtubules, cellular filaments composed of monomeric tubulin subunits, play ke
 &lt;hr /&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;So, all in all, it’s pretty likely that the catastrophe times for labeled and unlabled tubulin come from the same generative distribution.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;So, all in all, it’s pretty likely that the catastrophe times for labeled and unlabeled tubulin come from the same generative distribution. In the subsequent analysis, we hold this assumption. &lt;/b&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -1771,13 +1771,13 @@ Microtubules, cellular filaments composed of monomeric tubulin subunits, play ke
 &lt;hr /&gt;
 &lt;h3 id=&quot;could-the-data-be-gamma-distributed&quot;&gt;Could the data be Gamma distributed?&lt;/h3&gt;
 
-&lt;p&gt;The authors of Gardner et. al. assume that the times to catastrophe were Gamma distributed. Taking a look at the handy &lt;a href=&quot;https://distribution-explorer.github.io/&quot;&gt;distribution explorer&lt;/a&gt;, we can compare the story of microtubule growth to the story behind the Gamma distribution. The Gamma distribution is the amount of time we have to wait for n arrivals of a Poisson process. In this case, catastrophe is a multi-step process in which each sub-processes can be thought of as a Poisson process. So, the time for each sub-process to occur is exponentially distributed. The time you need to wait for all the multi-step processes to occur will then be Gamma distributed. The number of arrivals is given by the parameter &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; while the time for all arrivals to occur is given by &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;. The PDF is given by&lt;/p&gt;
+&lt;p&gt;The authors of Gardner et. al. assume that the times to catastrophe are Gamma distributed. Taking a look at the handy &lt;a href=&quot;https://distribution-explorer.github.io/&quot;&gt;distribution explorer&lt;/a&gt;, we can compare the story of microtubule growth to the story behind the Gamma distribution. The Gamma distribution is the amount of time we have to wait for n arrivals of a Poisson process. In this case, catastrophe is a multi-step process in which each sub-process can be thought of as a Poisson process. So, the time for each sub-process to occur is exponentially distributed. The time you need to wait for all the multi-step processes to occur will then be Gamma distributed. The number of arrivals is given by the parameter &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; while the time for all arrivals to occur is given by &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt;. The PDF is given by&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;f(y; \alpha, \beta) = \frac{1}{\Gamma(\alpha)} \frac{(\beta y)^{\alpha}}{y}e^{-\beta y}&lt;/script&gt;
 
 &lt;h3 id=&quot;an-alternative-hypothesis&quot;&gt;An alternative hypothesis&lt;/h3&gt;
 
-&lt;p&gt;Alternatively, we could consider that two biochemical processes have to happen in succession in order to trigger a catastrophe. We can model each of these processes as a Poisson process. The rate of arrivals, which corresponds biologically to the rate of the first biochemical process, is described by the variable &lt;script type=&quot;math/tex&quot;&gt;\beta_1&lt;/script&gt; while the other is described by &lt;script type=&quot;math/tex&quot;&gt;\beta_2&lt;/script&gt;. In this successive Poisson model, note that the value of &lt;script type=&quot;math/tex&quot;&gt;\beta_2&lt;/script&gt; doesn’t depend on the value of &lt;script type=&quot;math/tex&quot;&gt;\beta_1&lt;/script&gt;. In order to simulate the successive Poisson process model, we will add the times generated by the second Poisson process to those generated by the first. This works because once we have sampled a time for the first process from the exponential distribution, it essentially becomes our new zero point when sampling for the time taken for the second process. Thus, the time taken to complete both processes will simply be the sum of the time of the first process and the time of the second process.&lt;/p&gt;
+&lt;p&gt;Alternatively, we could consider that two biochemical processes have to happen in succession in order to trigger a catastrophe. We can model each of these processes as a Poisson process. The rate of arrivals, which corresponds biologically to the rate of the first biochemical process, is described by the variable &lt;script type=&quot;math/tex&quot;&gt;\beta_1&lt;/script&gt; while the other is described by &lt;script type=&quot;math/tex&quot;&gt;\beta_2&lt;/script&gt;. In this successive Poisson model, note that the value of &lt;script type=&quot;math/tex&quot;&gt;\beta_2&lt;/script&gt; doesn’t depend on the value of &lt;script type=&quot;math/tex&quot;&gt;\beta_1&lt;/script&gt;. In order to simulate the model, we will add the times generated by the second Poisson process to those generated by the first. This works because once we have sampled a time for the first process from the exponential distribution, it essentially becomes our new zero point when sampling for the time taken for the second process.&lt;/p&gt;
 
 &lt;p&gt;We can analytically calculate the probability density function (PDF) of the distribution matching the story we told.
 We find that the PDF simplifies to
@@ -1791,7 +1791,7 @@ We find that the PDF simplifies to
 
 &lt;p&gt;For each of these potential models (gamma and exponential), we need to determine the parameters that will allow the model to best fit our data. For the gamma distribution, this is ɑ and β, and for the exponential distribution, it is the two successive values of beta. We determine these estimates by maximizing the log likelihood for the parameters given our data set, which is the same as maximizing the likelihood but is computationally simpler. Rather than determining the parameters analytically, we generated estimates using bootstrapping by maximizing the log likelihood over multiple trials and averaging over the individual results.&lt;/p&gt;
 
-&lt;p&gt;With the parameters estimates gained from maximum likelihood estimation, we can generate data sets from the appropriate distribution using these parameters and compare the ECDF to the experimental ECDF to loosely estimate how well our model fits the data.&lt;/p&gt;
+&lt;p&gt;With the parameter estimates gained from maximum likelihood estimation, we can generate data sets from the appropriate distribution using these parameters and compare the theoretical ECDF to the experimental ECDF to loosely estimate how well our model fits the data.&lt;/p&gt;
 
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 &lt;center&gt;
@@ -2353,13 +2353,13 @@ We find that the PDF simplifies to
 &lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.html&quot;&gt;&lt;code&gt;tut2.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/MLE_analysis.py&quot;&gt;&lt;code&gt;MLE_analysis.py&lt;/code&gt;&lt;/a&gt;  &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
-&lt;p&gt;This can tell whether the model is reasonable, but does not necessarily give us enough information to determine which model is better.&lt;/p&gt;
+&lt;p&gt;At first glance, it seems as though the Gamma distribution model aligns better with our results. However, this can only tell us whether the model is reasonable, but does not necessarily give us enough information to determine which model is better.&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\cdot \cdot \cdot&lt;/script&gt;
 
 &lt;h3 id=&quot;model-comparison&quot;&gt;Model comparison&lt;/h3&gt;
 
-&lt;p&gt;We explored the question of which model was preferred by solely focusing on the data from the fluorescent tagged tubulin, since we found through hypothesis testing that there was not a significant difference between the two conditions. Within this experimental condition, the experimenters also repeated the process for multiple different concentrations of tubulin.&lt;/p&gt;
+&lt;p&gt;We explored the question of which model was preferred by solely focusing on the data from the fluorescent tagged tubulin, since we found through hypothesis testing that there was not a significant difference between the two conditions. Within this experimental condition, the experimenters also repeated the process for multiple different concentrations of tubulin. We show the times to catastrophe for each concentration below.&lt;/p&gt;
 
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 &lt;center&gt;
@@ -2921,7 +2921,9 @@ We find that the PDF simplifies to
 &lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.html&quot;&gt;&lt;code&gt;tut2.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/exploratory_analysis.py&quot;&gt;&lt;code&gt;exploratory_analysis.py&lt;/code&gt;&lt;/a&gt; &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
-&lt;p&gt;We used three different metrics to compare the two models. The first of these, the QQ plot, uses quantiles of the experimental dataset, overlaid with the theoretical results using our model, to visualize how well our models fit the data. If our model is mostly contained within the quantiles, that implies it is a good fit.&lt;/p&gt;
+&lt;p&gt;Overall, each of the individual concentrations seem to behave very similarly, with the highest concentration having the longest time to catastrophe on average.&lt;/p&gt;
+
+&lt;p&gt;We used three different metrics to compare the two models. The first of these, the QQ plot, plots quantiles of the experimental dataset against quantiles of the theoretical dataset. If the two datasets come from the same distribution, the line generated in the plot will appear mostly straight.&lt;/p&gt;
 
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 &lt;center&gt;
@@ -3483,7 +3485,7 @@ We find that the PDF simplifies to
 &lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.html&quot;&gt;&lt;code&gt;tut2.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/model_assessment.py&quot;&gt;&lt;code&gt;model_assessment.py&lt;/code&gt;&lt;/a&gt; &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
-&lt;p&gt;We also generate predictive regression plots for each model. Predictive ECDFs overlay the results of the experimental ECDF with the results we would get using each of our models. The two curves should be aligned very closely if the model fits the data.&lt;/p&gt;
+&lt;p&gt;We also generated predictive ECDF plots for each model. Predictive ECDFs overlay the results of the experimental ECDF with the results we would get using each of our models. The two curves should be aligned very closely if the model fits the data.&lt;/p&gt;
 
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 &lt;center&gt;
@@ -4045,7 +4047,9 @@ We find that the PDF simplifies to
 &lt;b&gt;example:&lt;/b&gt; &lt;a href=&quot;../../../../code/MCAT_Tutorial_Part2.html&quot;&gt;&lt;code&gt;tut2.py&lt;/code&gt;&lt;/a&gt; | &lt;b&gt;source code:&lt;/b&gt; &lt;a href=&quot;../../../../MCAT_pkg/MCAT_pkg/model_assessment.py&quot;&gt;&lt;code&gt;model_assessment.py&lt;/code&gt;&lt;/a&gt; &lt;/center&gt;
 &lt;center&gt;$$\cdot$$&lt;/center&gt;
 
-&lt;p&gt;For a more quantitative metric, we also calculated the Akaike Information Criterion for each of our datasets, which is found using the log likelihood value for the parameters. This criterion can loosely be interpreted as a distance metric between the theoretical and empirical distributions, so a smaller value implies a better fit. The AIC can be calculated as&lt;/p&gt;
+&lt;p&gt;Here, we see that the Gamma distribution is a much better fit for the experimental results.&lt;/p&gt;
+
+&lt;p&gt;For a more quantitative metric, we also calculated the Akaike Information Criterion for each of our models, which is found using the log likelihood value for the parameters. This criterion can loosely be interpreted as a distance metric between the theoretical and empirical distributions, so a smaller value implies a better fit. The AIC can be calculated as&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\text{AIC} = -2\ell(\theta^*;\text{data}) + 2p&lt;/script&gt;
 
@@ -4107,378 +4111,6 @@ We find that the PDF simplifies to
 &lt;p&gt;We thank the publishers of Gardner et. al. for sharing their data, the BeBi103 TA’s for their guidance, the makers of Poole for this website template, &lt;a href=&quot;https://github.com/atisor73&quot;&gt;Rosita Fu&lt;/a&gt; and &lt;a href=&quot;https://github.com/gchure&quot;&gt;Griffin Chure&lt;/a&gt; for design inspiration, and of course, &lt;a href=&quot;https://github.com/justinbois&quot;&gt;Justin Bois&lt;/a&gt; for his assistance, insight, and useful code!&lt;/p&gt;
 
 &lt;p&gt;Website header generated using &lt;a href=&quot;https://ccsb.scripps.edu/cellpaint/&quot;&gt;CellPAINT 2.0.&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Options</title>
-   <link href="http://localhost:4000/2020/04/03/options/"/>
-   <updated>2020-04-03T00:00:00-07:00</updated>
-   <id>http://localhost:4000/2020/04/03/options</id>
-   <content type="html">&lt;p&gt;With Poole as a baseline theme for Jekyll, there aren’t many options available out of the box. Basic light and dark mode support is included. Colors are also provided for your own customization, while other Poole themes build on this to create more unique looks.&lt;/p&gt;
-
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#dark-mode&quot; id=&quot;markdown-toc-dark-mode&quot;&gt;Dark mode&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#creating-themes&quot; id=&quot;markdown-toc-creating-themes&quot;&gt;Creating themes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#colors&quot; id=&quot;markdown-toc-colors&quot;&gt;Colors&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#gray-colors&quot; id=&quot;markdown-toc-gray-colors&quot;&gt;Gray colors&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#google-analytics&quot; id=&quot;markdown-toc-google-analytics&quot;&gt;Google Analytics&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;dark-mode&quot;&gt;Dark mode&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Dark mode is enabled automatically&lt;/strong&gt; via CSS media query—you’ll find the source code for this in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_sass/_variables.scss&lt;/code&gt; stylesheet. If you’re familiar with CSS custom properties, you can also use this method to build your own color schemes.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://markdotto.com/2018/11/05/css-dark-mode/&quot;&gt;Read more about using CSS dark mode&lt;/a&gt; via media queries like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Example media query to detect dark mode&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;@media&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prefers-color-scheme&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dark&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;creating-themes&quot;&gt;Creating themes&lt;/h2&gt;
-
-&lt;p&gt;If you want to make your own color schemes, modify the CSS variables in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_sass/_variables.scss&lt;/code&gt; stylesheet with a scoped data attribute or class name.&lt;/p&gt;
-
-&lt;p&gt;For example, below we’ve created the beginnings of a blue theme:&lt;/p&gt;
-
-&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Example blue theme&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;data-theme&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;blue&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;--body-bg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;--body-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Then, apply the theme by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;data-theme=&quot;blue&quot;&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;/code&gt; element.&lt;/p&gt;
-
-&lt;h2 id=&quot;colors&quot;&gt;Colors&lt;/h2&gt;
-
-&lt;p&gt;Change your site styles by modifying the source code with these CSS custom properties. Poole’s colors come from the &lt;a href=&quot;https://yeun.github.io/open-color/&quot;&gt;Open Color project&lt;/a&gt;.&lt;/p&gt;
-
-&lt;dl class=&quot;colors&quot;&gt;
-  &lt;dt style=&quot;background-color: #fa5252;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--red)&lt;/strong&gt;&lt;br /&gt;
-    #fa5252
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #e64980;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--pink)&lt;/strong&gt;&lt;br /&gt;
-    #e64980
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #be4bdb;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--grape)&lt;/strong&gt;&lt;br /&gt;
-    #be4bdb
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #7950f2;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--purple)&lt;/strong&gt;&lt;br /&gt;
-    #7950f2
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #4c6ef5;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--indigo)&lt;/strong&gt;&lt;br /&gt;
-    #4c6ef5
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #228be6;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--blue)&lt;/strong&gt;&lt;br /&gt;
-    #228be6
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #15aabf;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--cyan)&lt;/strong&gt;&lt;br /&gt;
-    #15aabf
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #12b886;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--teal)&lt;/strong&gt;&lt;br /&gt;
-    #12b886
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #40c057;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--green)&lt;/strong&gt;&lt;br /&gt;
-    #40c057
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #fab005;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--yellow)&lt;/strong&gt;&lt;br /&gt;
-    #fab005
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #fd7e14;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--orange)&lt;/strong&gt;&lt;br /&gt;
-    #fd7e14
-  &lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;h2 id=&quot;gray-colors&quot;&gt;Gray colors&lt;/h2&gt;
-
-&lt;p&gt;There are also ten grayscale colors to choose from.&lt;/p&gt;
-
-&lt;dl class=&quot;colors&quot;&gt;
-  &lt;dt style=&quot;background-color: #f8f9fa;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--gray-000)&lt;/strong&gt;&lt;br /&gt;
-    #f8f9fa
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #f1f3f5;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--gray-100)&lt;/strong&gt;&lt;br /&gt;
-    #f1f3f5
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #e9ecef;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--gray-200)&lt;/strong&gt;&lt;br /&gt;
-    #e9ecef
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #dee2e6;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--gray-300)&lt;/strong&gt;&lt;br /&gt;
-    #dee2e6
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #ced4da;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--gray-400)&lt;/strong&gt;&lt;br /&gt;
-    #ced4da
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #adb5bd;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--gray-500)&lt;/strong&gt;&lt;br /&gt;
-    #adb5bd
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #868e96;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--gray-600)&lt;/strong&gt;&lt;br /&gt;
-    #868e96
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #495057;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--gray-700)&lt;/strong&gt;&lt;br /&gt;
-    #495057
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #343a40;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--gray-800)&lt;/strong&gt;&lt;br /&gt;
-    #343a40
-  &lt;/dd&gt;
-  &lt;dt style=&quot;background-color: #212529;&quot;&gt;&lt;/dt&gt;
-  &lt;dd&gt;
-    &lt;strong&gt;var(--gray-900)&lt;/strong&gt;&lt;br /&gt;
-    #212529
-  &lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;h2 id=&quot;google-analytics&quot;&gt;Google Analytics&lt;/h2&gt;
-
-&lt;p&gt;Specify &lt;code class=&quot;highlighter-rouge&quot;&gt;ga_analytics&lt;/code&gt; in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; and restart the server to add Google Analytics tracking code.&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Google Analytics example&lt;/span&gt;
-&lt;span class=&quot;ss&quot;&gt;ga_analytics: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;UA&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;000000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Example content</title>
-   <link href="http://localhost:4000/2020/04/02/example-content/"/>
-   <updated>2020-04-02T00:00:00-07:00</updated>
-   <id>http://localhost:4000/2020/04/02/example-content</id>
-   <content type="html">&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Howdy!&lt;/strong&gt; This is an example blog post that shows several types of HTML content supported in this theme.&lt;/p&gt;
-
-&lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Etiam porta &lt;strong&gt;sem malesuada magna&lt;/strong&gt; mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt;
-
-&lt;h2 id=&quot;inline-html-elements&quot;&gt;Inline HTML elements&lt;/h2&gt;
-
-&lt;p&gt;HTML defines a long list of available inline tags, a complete list of which can be found on the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;To bold text&lt;/strong&gt;, use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;To italicize text&lt;/em&gt;, use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;em&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;mark&gt;To highlight&lt;/mark&gt;, use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Abbreviations, like &lt;abbr title=&quot;HyperText Markup Langage&quot;&gt;HTML&lt;/abbr&gt; should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt;, with an optional &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; attribute for the full phrase.&lt;/li&gt;
-  &lt;li&gt;Citations, like &lt;cite&gt;— Mark Otto&lt;/cite&gt;, should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;del&gt;Deleted&lt;/del&gt; text should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;del&amp;gt;&lt;/code&gt; and &lt;ins&gt;inserted&lt;/ins&gt; text should use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Superscript &lt;sup&gt;text&lt;/sup&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; and subscript &lt;sub&gt;text&lt;/sub&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Most of these elements are styled by browsers with few modifications on our part.&lt;/p&gt;
-
-&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
-
-&lt;p&gt;Footnotes are supported as part of the Markdown syntax. Here’s one in action. Clicking this number&lt;sup id=&quot;fnref:fn-sample_footnote&quot;&gt;&lt;a href=&quot;#fn:fn-sample_footnote&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; will lead you to a footnote. The syntax looks like:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Clicking this number[^fn-sample_footnote]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Each footnote needs the &lt;code class=&quot;highlighter-rouge&quot;&gt;^fn-&lt;/code&gt; prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[^fn-sample_footnote]: Handy! Now click the return link to go back.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.&lt;/p&gt;
-
-&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
-
-&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
-
-&lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
-
-&lt;p&gt;Inline code is available with the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;code&amp;gt;&lt;/code&gt; element. Snippets of multiple lines of code are supported through Rouge. Longer lines will automatically scroll horizontally when needed. You may also use code fencing (triple backticks) for rendering code.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;return a + b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;You may also optionally show code snippets with line numbers. Add &lt;code class=&quot;highlighter-rouge&quot;&gt;linenos&lt;/code&gt; to the Rouge tags.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-2
-3
-4
-5
-6
-7
-8
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;return a + b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;
-&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.&lt;/p&gt;
-
-&lt;h3 id=&quot;gists-via-github-pages&quot;&gt;Gists via GitHub Pages&lt;/h3&gt;
-
-&lt;p&gt;Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/13f94b734a4ddb132735.js?file=gist.md&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.&lt;/p&gt;
-
-&lt;h3 id=&quot;lists&quot;&gt;Lists&lt;/h3&gt;
-
-&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/li&gt;
-  &lt;li&gt;Donec id elit non mi porta gravida at eget metus.&lt;/li&gt;
-  &lt;li&gt;Nulla vitae elit libero, a pharetra augue.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Vestibulum id ligula porta felis euismod semper.&lt;/li&gt;
-  &lt;li&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/li&gt;
-  &lt;li&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.&lt;/p&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;HyperText Markup Language (HTML)&lt;/dt&gt;
-  &lt;dd&gt;The language used to describe and define the content of a Web page&lt;/dd&gt;
-
-  &lt;dt&gt;Cascading Style Sheets (CSS)&lt;/dt&gt;
-  &lt;dd&gt;Used to describe the appearance of Web content&lt;/dd&gt;
-
-  &lt;dt&gt;JavaScript (JS)&lt;/dt&gt;
-  &lt;dd&gt;The programming language used to build advanced Web sites and applications&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;p&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
-
-&lt;h3 id=&quot;images&quot;&gt;Images&lt;/h3&gt;
-
-&lt;p&gt;Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://placehold.it/800x400&quot; alt=&quot;placeholder&quot; title=&quot;Large example image&quot; /&gt;
-&lt;img src=&quot;http://placehold.it/400x200&quot; alt=&quot;placeholder&quot; title=&quot;Medium example image&quot; /&gt;
-&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;placeholder&quot; title=&quot;Small example image&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
-
-&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Upvotes&lt;/th&gt;
-      &lt;th&gt;Downvotes&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Totals&lt;/td&gt;
-      &lt;td&gt;21&lt;/td&gt;
-      &lt;td&gt;23&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Alice&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Bob&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Charlie&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;9&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:fn-sample_footnote&quot;&gt;
-      &lt;p&gt;Handy! Now click the return link to go back. &lt;a href=&quot;#fnref:fn-sample_footnote&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>What's Jekyll?</title>
-   <link href="http://localhost:4000/2020/03/01/whats-jekyll/"/>
-   <updated>2020-03-01T00:00:00-08:00</updated>
-   <id>http://localhost:4000/2020/03/01/whats-jekyll</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/jekyll/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It’s an immensely useful tool. Find out more by &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
 </content>
  </entry>
  
