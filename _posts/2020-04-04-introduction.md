@@ -207,7 +207,7 @@ $$\cdot \cdot \cdot$$
 <br>
 <a href="../../../../code/MCAT_Tutorial_Part1.html"><code>MCAT_Tutorial_Part1.html</code></a> | <a href="../../../../code/MCAT_Tutorial_Part1.ipynb"><code>MCAT_Tutorial_Part1.ipynb</code></a> (Experimental Dynamics)
 <br>
-<a href="../../../../code/MCAT_Tutorial_Part1.html"><code>MCAT_Tutorial_Part1.html</code></a> | <a href="../../../../code/MCAT_Tutorial_Part2.ipynb"><code>MCAT_Tutorial_Part2.ipynb</code></a> (Modeling Catastrophe)
+<a href="../../../../code/MCAT_Tutorial_Part2.html"><code>MCAT_Tutorial_Part2.html</code></a> | <a href="../../../../code/MCAT_Tutorial_Part2.ipynb"><code>MCAT_Tutorial_Part2.ipynb</code></a> (Modeling Catastrophe)
 
 - The analysis package can be downloaded here:
 <br>
