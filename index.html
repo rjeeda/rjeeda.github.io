@@ -99,7 +99,7 @@
       -webkit-font-smoothing: antialiased;
     }
     .site-wrap {
-      max-width: 1280px;
+      max-width: 1100px;
       margin: 0 auto;
       border-left: 0.5px solid var(--border);
       border-right: 0.5px solid var(--border);
@@ -133,7 +133,7 @@
     }
     .nav-name {
       font-family: 'Lora', serif;
-      font-size: 16px;
+      font-size: 18px;
       color: var(--ink);
       text-decoration: none;
       letter-spacing: 0.01em;
@@ -145,7 +145,7 @@
       align-items: center;
     }
     .nav-links a {
-      font-size: 12px;
+      font-size: 13px;
       letter-spacing: 0.07em;
       text-transform: uppercase;
       color: var(--ink-light);
@@ -191,7 +191,7 @@
       justify-content: space-between;
     }
     .eyebrow {
-      font-size: 11px;
+      font-size: 13px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--amber);
@@ -200,7 +200,7 @@
     }
     .hero-name {
       font-family: 'Lora', serif;
-      font-size: 38px;
+      font-size: 44px;
       line-height: 1.18;
       color: var(--ink);
       margin-bottom: 28px;
@@ -209,12 +209,11 @@
     .hero-photo-bio {
       display: flex;
       gap: 28px;
-      align-items: flex-start;
+      align-items: center;
     }
     .hero-photo {
-      width: 140px;
+      width: 180px;
       height: auto;
-      align-self: stretch;
       object-fit: cover;
       border-radius: 4px;
       flex-shrink: 0;
@@ -229,13 +228,13 @@
       border: 0.5px solid var(--border);
     }
     .hero-bio {
-      font-size: 15px;
+      font-size: 17px;
       color: var(--ink-mid);
       line-height: 1.8;
       font-weight: 300;
     }
     .skills-label {
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--ink-light);
@@ -251,8 +250,8 @@
       margin-bottom: 4px;
     }
     .tag {
-      font-size: 11px;
-      padding: 5px 11px;
+      font-size: 13px;
+      padding: 6px 12px;
       border-radius: 3px;
       font-weight: 400;
       letter-spacing: 0.01em;
@@ -290,7 +289,7 @@
       background: var(--bg);
     }
     .section-title {
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--ink-light);
@@ -346,7 +345,7 @@
       justify-content: center;
     }
     .project-type {
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--amber);
@@ -355,7 +354,7 @@
     }
     .project-title {
       font-family: 'Lora', serif;
-      font-size: 18px;
+      font-size: 21px;
       color: var(--ink);
       margin-bottom: 8px;
       line-height: 1.3;
@@ -371,7 +370,7 @@
       margin-left: 8px;
     }
     .project-desc {
-      font-size: 13px;
+      font-size: 15px;
       color: var(--ink-mid);
       line-height: 1.75;
       margin-bottom: 14px;
@@ -384,8 +383,8 @@
       gap: 5px;
     }
     .pill {
-      font-size: 10px;
-      padding: 3px 9px;
+      font-size: 12px;
+      padding: 4px 10px;
       border-radius: 3px;
       background: var(--bg-dark);
       color: var(--ink-mid);
@@ -443,13 +442,13 @@
     .pub:last-child { border-bottom: none; }
     .pub-year {
       padding: 26px 0 24px 48px;
-      font-size: 12px;
+      font-size: 14px;
       color: var(--ink-light);
       font-weight: 300;
     }
     .pub-body { padding: 24px 32px; }
     .pub-venue {
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--amber);
@@ -458,14 +457,14 @@
     }
     .pub-title {
       font-family: 'Lora', serif;
-      font-size: 16px;
+      font-size: 18px;
       color: var(--ink);
       margin-bottom: 6px;
       line-height: 1.35;
       font-weight: 400;
     }
     .pub-authors {
-      font-size: 12px;
+      font-size: 14px;
       color: var(--ink-light);
       font-style: italic;
       font-weight: 300;
@@ -520,12 +519,12 @@
       font-weight: 300;
     }
     .cv-role {
-      font-size: 13px;
+      font-size: 15px;
       color: var(--ink);
       line-height: 1.5;
     }
     .cv-org {
-      font-size: 12px;
+      font-size: 14px;
       color: var(--ink-mid);
       margin-top: 2px;
       font-weight: 300;
@@ -547,7 +546,7 @@
     }
     .footer-links { display: flex; gap: 20px; }
     .footer-links a {
-      font-size: 11px;
+      font-size: 13px;
       color: var(--ink-light);
       text-decoration: none;
       letter-spacing: 0.04em;
@@ -607,12 +606,18 @@
              onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
         <div class="hero-photo-placeholder" style="display:none;"></div>
         <p class="hero-bio">
-          I'm a PhD student in Biological Engineering at MIT, advised by Otto Cordero,
-          where I study how spatial structure shapes the behavior of microbial communities.
-          Before MIT, I studied Bioengineering at Caltech and spent time in industry
-          building AI-based data science products. I'm passionate about finding structure
-          in large, messy datasets and communicating what they reveal.
+          I'm a quantitative scientist with deep experience in bioengineering. Through my work,
+          I've found that <strong style="color: var(--amber); font-weight: 600;">what compels me most is data science</strong>: going from messy tables
+          to scientific insight. I love the process of communicating through data and visualizations.
+          I've taken this skill beyond biology into industry, and I'm eager to keep exploring
+          new application areas.
         </p>
+        <p class="hero-bio" style="margin-top: 14px; font-size: 13px; color: var(--ink-light); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400;">I'm excited about</p>
+        <ul style="margin-top: 8px; padding-left: 18px; list-style: disc;">
+          <li class="hero-bio" style="margin-bottom: 6px;">Making interactive visualizations of high dimensional data</li>
+          <li class="hero-bio" style="margin-bottom: 6px;">Communicating with others to understand their data needs</li>
+          <li class="hero-bio">Finding statistical insights in diverse types of data</li>
+        </ul>
       </div>
     </div>
     <div class="hero-divider"></div>
@@ -674,7 +679,7 @@
     </div>
     <div style="padding: 40px 48px; max-width: 900px;">
       <div class="cv-entry">
-        <span class="cv-year">2022–</span>
+        <span class="cv-year">2022–Current</span>
         <div>
           <p class="cv-role">PhD / SM, Biological Engineering</p>
           <p class="cv-org">Massachusetts Institute of Technology · Cambridge, MA</p>
@@ -739,8 +744,8 @@
         <h2 class="project-title">Voshchaznikovo Analysis <span class="project-context">Data Bootcamp · Caltech</span></h2>
         <p class="project-desc">
           An interactive notebook exploring 19th century Russian village census data.
-          Did everyone really get married at 12 and have 10 kids? Adjust parameters
-          in real time and see the results update live.
+          Did everyone really get married at 12 and have 10 kids? Explore the data
+          and see what the historical record actually shows.
         </p>
         <div class="project-pills">
           <span class="pill">Python</span>
@@ -751,11 +756,10 @@
         </div>
       </div>
       <div class="project-actions">
-        <a href="https://mybinder.org/v2/gh/rjeeda/data_vis/master?filepath=Voshchaznikovo_Analysis.ipynb"
+        <a href="https://hub.bids.mybinder.org/user/rjeeda-data_vis-xjm93b7b/notebooks/Voshchaznikovo_Analysis.ipynb"
            target="_blank" rel="noopener" class="btn btn-binder">
-          Launch notebook ↗
+          View notebook ↗
         </a>
-        <p class="binder-note">First load ~60s<br>while environment builds</p>
         <a href="https://github.com/rjeeda/data_vis" target="_blank" rel="noopener" class="btn btn-secondary">
           GitHub
         </a>
