@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Data Scientist & Researcher</title>
+  <title>Rashi Jeeda — Data Scientist & Bioengineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -13,18 +13,80 @@
     :root {
       --bg:          #faf7f2;
       --bg-muted:    #f2ede4;
-      --bg-dark:     #eee8de;
-      --border:      #e0d8cc;
-      --ink:         #1a1510;
-      --ink-mid:     #7a6a58;
-      --ink-light:   #b0a090;
-      --amber:       #BA7517;
-      --amber-light: #FAEEDA;
-      --amber-dark:  #412402;
-      --coral-light: #FAECE7;
-      --coral-dark:  #4A1B0C;
-      --green-light: #EAF3DE;
-      --green-dark:  #27500A;
+      --bg-dark:     #e8e1d5;
+      --border:      #cec5b5;
+      --ink:         #0f0c09;
+      --ink-mid:     #4a3f32;
+      --ink-light:   #7a6a58;
+      --amber:       #9a5f0a;
+      --amber-light: #faeeda;
+      --amber-dark:  #3a1e00;
+      --coral-light: #faece7;
+      --coral-dark:  #3e1408;
+      --green-light: #eaf3de;
+      --green-dark:  #1e4008;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg:          #16130f;
+        --bg-muted:    #1e1a14;
+        --bg-dark:     #26211a;
+        --border:      #3a3228;
+        --ink:         #f0ebe3;
+        --ink-mid:     #b8a898;
+        --ink-light:   #7a6a58;
+        --amber:       #e09a3a;
+        --amber-light: #2e1f08;
+        --amber-dark:  #faeeda;
+        --coral-light: #2a1208;
+        --coral-dark:  #faece7;
+        --green-light: #0e2208;
+        --green-dark:  #eaf3de;
+      }
+      :root:not([data-theme="light"]) nav {
+        background: rgba(22, 19, 15, 0.94);
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg:          #16130f;
+      --bg-muted:    #1e1a14;
+      --bg-dark:     #26211a;
+      --border:      #3a3228;
+      --ink:         #f0ebe3;
+      --ink-mid:     #b8a898;
+      --ink-light:   #7a6a58;
+      --amber:       #e09a3a;
+      --amber-light: #2e1f08;
+      --amber-dark:  #faeeda;
+      --coral-light: #2a1208;
+      --coral-dark:  #faece7;
+      --green-light: #0e2208;
+      --green-dark:  #eaf3de;
+    }
+    :root[data-theme="dark"] nav {
+      background: rgba(22, 19, 15, 0.94);
+    }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      background: none;
+      border: 0.5px solid var(--border);
+      border-radius: 2px;
+      color: var(--ink-light);
+      cursor: pointer;
+      padding: 6px 10px;
+      font-size: 14px;
+      line-height: 1;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      display: flex;
+      align-items: center;
+    }
+    .theme-toggle:hover {
+      background: var(--bg-dark);
+      color: var(--ink);
+      border-color: var(--ink-light);
     }
 
     html { scroll-behavior: smooth; }
@@ -130,23 +192,40 @@
       margin-bottom: 16px;
       font-weight: 400;
     }
-    .hero-title {
+    .hero-name {
       font-family: 'Lora', serif;
       font-size: 38px;
       line-height: 1.18;
       color: var(--ink);
-      margin-bottom: 20px;
+      margin-bottom: 28px;
       font-weight: 400;
     }
-    .hero-title em {
-      font-style: italic;
-      color: var(--amber);
+    .hero-photo-bio {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+    .hero-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 4px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--bg-dark);
+      border: 0.5px solid var(--border);
+    }
+    .hero-photo-placeholder {
+      width: 110px;
+      height: 110px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      background: var(--bg-dark);
+      border: 0.5px solid var(--border);
     }
     .hero-bio {
       font-size: 15px;
       color: var(--ink-mid);
       line-height: 1.8;
-      max-width: 400px;
       font-weight: 300;
     }
     .skills-label {
@@ -154,14 +233,16 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--ink-light);
-      margin-bottom: 14px;
+      margin-bottom: 10px;
+      margin-top: 16px;
       font-weight: 500;
     }
+    .skills-label:first-child { margin-top: 0; }
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 7px;
-      margin-bottom: 36px;
+      margin-bottom: 4px;
     }
     .tag {
       font-size: 11px;
@@ -273,6 +354,15 @@
       margin-bottom: 8px;
       line-height: 1.3;
       font-weight: 400;
+    }
+    .project-context {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      color: var(--ink-light);
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      vertical-align: middle;
+      margin-left: 8px;
     }
     .project-desc {
       font-size: 13px;
@@ -466,7 +556,9 @@
       .hero { grid-template-columns: 1fr; }
       .hero-divider { display: none; }
       .hero-left, .hero-right { padding: 40px 24px; }
-      .hero-title { font-size: 28px; }
+      .hero-name { font-size: 28px; }
+      .hero-photo-bio { flex-direction: column; }
+      .hero-photo, .hero-photo-placeholder { width: 80px; height: 80px; }
       .section-header { padding: 12px 24px; }
       .project { grid-template-columns: 1fr; }
       .project-img { min-height: 120px; border-right: none; border-bottom: 0.5px solid var(--border); }
@@ -486,43 +578,66 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-name">Your Name</a>
+    <a href="#" class="nav-name">Rashi Jeeda</a>
     <ul class="nav-links">
+      <li><a href="#about">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="mailto:you@email.com" class="nav-contact">Contact</a></li>
+      <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="mailto:rjeeda@mit.edu" class="nav-contact">Contact</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-left">
-      <p class="eyebrow fade f1">Data Scientist &amp; Researcher · Boston, MA</p>
-      <h1 class="hero-title fade f2">Turning <em>complex data</em><br>into clear insight.</h1>
-      <p class="hero-bio fade f3">
-        PhD researcher with X years building models at the intersection of
-        [your field] and data science. I work on problems where the data
-        is messy, the stakes are real, and the findings need to be communicated
-        clearly to both technical and non-technical audiences.
-      </p>
+      <p class="eyebrow fade f1">Data Scientist &amp; Bioengineer · Boston, MA</p>
+      <h1 class="hero-name fade f2">Rashi Jeeda</h1>
+      <div class="hero-photo-bio fade f3">
+        <!-- Replace 'photo.jpg' with your actual image filename -->
+        <img src="img/headshot.jpg" alt="Rashi Jeeda" class="hero-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="hero-photo-placeholder" style="display:none;"></div>
+        <p class="hero-bio">
+          I'm a PhD student in Biological Engineering at MIT, advised by Otto Cordero,
+          where I study how spatial structure shapes the behavior of microbial communities.
+          Before MIT, I studied Bioengineering at Caltech and spent time in industry
+          building AI-based data science products. I'm passionate about finding structure
+          in large, messy datasets and communicating what they reveal.
+        </p>
+      </div>
     </div>
     <div class="hero-divider"></div>
     <div class="hero-right">
       <div class="fade f3">
-        <p class="skills-label">Skills &amp; tools</p>
+        <p class="skills-label">Data Science</p>
         <div class="tags">
           <span class="tag tag-amber">Python</span>
           <span class="tag tag-amber">R</span>
           <span class="tag tag-amber">Pandas</span>
+          <span class="tag tag-amber">NumPy</span>
+          <span class="tag tag-amber">SQL</span>
+        </div>
+        <p class="skills-label">Data Visualization</p>
+        <div class="tags">
           <span class="tag tag-coral">Bokeh</span>
           <span class="tag tag-coral">Plotly</span>
           <span class="tag tag-coral">Panel</span>
+          <span class="tag tag-coral">Matplotlib</span>
+        </div>
+        <p class="skills-label">Analytic Techniques</p>
+        <div class="tags">
           <span class="tag tag-green">Bayesian modeling</span>
           <span class="tag tag-green">Time series</span>
-          <span class="tag tag-neutral">NumPy</span>
-          <span class="tag tag-neutral">scikit-learn</span>
-          <span class="tag tag-neutral">SQL</span>
+          <span class="tag tag-green">Image analysis</span>
+          <span class="tag tag-green">scikit-learn</span>
+        </div>
+        <p class="skills-label">Other Interests</p>
+        <div class="tags">
+          <span class="tag tag-neutral">Video editing</span>
+          <span class="tag tag-neutral">Premiere</span>
+          <span class="tag tag-neutral">Blogging</span>
         </div>
       </div>
       <div class="external-links fade f4">
@@ -532,7 +647,7 @@
           GitHub
         </a>
         <!-- Google Scholar -->
-        <a href="https://scholar.google.com" target="_blank" rel="noopener" class="ext-link">
+        <a href="https://scholar.google.com/citations?user=Xg7RmvkAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" class="ext-link">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
           Google Scholar
         </a>
@@ -545,48 +660,80 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-title">Experience</span>
+    </div>
+    <div style="padding: 40px 48px; max-width: 900px;">
+      <div class="cv-entry">
+        <span class="cv-year">2022–</span>
+        <div>
+          <p class="cv-role">PhD / SM, Biological Engineering</p>
+          <p class="cv-org">Massachusetts Institute of Technology · Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="cv-entry">
+        <span class="cv-year">2025</span>
+        <div>
+          <p class="cv-role">Data Science Intern</p>
+          <p class="cv-org"><a href="https://sigmasquared.io/" target="_blank" rel="noopener" style="color: var(--ink-mid); text-decoration: none; border-bottom: 0.5px solid var(--border);">Sigma Squared</a> · Cambridge, MA</p>
+        </div>
+      </div>
+      <div class="cv-entry">
+        <span class="cv-year">2018–22</span>
+        <div>
+          <p class="cv-role">Bachelor's, Bioengineering</p>
+          <p class="cv-org">California Institute of Technology · Pasadena, CA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <div id="projects">
     <div class="section-header fade f4">
       <span class="section-title">Selected projects</span>
     </div>
 
-    <!-- Project 1 — GitHub Pages (already live) -->
+    <!-- Project 1 — Microtubule Catastrophe -->
     <article class="project fade f5">
-      <div class="project-img"></div>
+      <div class="project-img" style="background-image: url('img/project-microtubule.jpg'); background-size: cover; background-position: center;"></div>
       <div class="project-body">
-        <p class="project-type">Data Visualisation · 2024</p>
-        <h2 class="project-title">Project One Title</h2>
+        <p class="project-type">Data Visualisation &amp; Modelling · 2020</p>
+        <h2 class="project-title">Microtubule Catastrophe <span class="project-context">Biology Data Visualization · Caltech</span></h2>
         <p class="project-desc">
-          A short description of what this project does, what problem it solves,
-          and what's interesting about it. Two to three sentences is ideal — enough
-          to give context without overwhelming.
+          Microtubules are structures in cells that constantly build up and fall apart.
+          How is this process regulated? I explore this question through interactive
+          plots and statistical modeling.
         </p>
         <div class="project-pills">
           <span class="pill">Python</span>
-          <span class="pill">GitHub Pages</span>
+          <span class="pill">Bokeh</span>
+          <span class="pill">Jekyll</span>
+          <span class="pill">Jupyter</span>
         </div>
       </div>
       <div class="project-actions">
-        <a href="https://rjeeda.github.io/your-project-1" target="_blank" rel="noopener" class="btn btn-primary">
+        <a href="https://rjeeda.github.io/microtubule-catastrophe" target="_blank" rel="noopener" class="btn btn-primary">
           View project →
         </a>
-        <a href="https://github.com/rjeeda/your-project-1" target="_blank" rel="noopener" class="btn btn-secondary">
+        <a href="https://github.com/rjeeda/microtubule-catastrophe" target="_blank" rel="noopener" class="btn btn-secondary">
           GitHub
         </a>
       </div>
     </article>
 
-    <!-- Project 2 — Binder (Jupyter / Panel) -->
+    <!-- Project 2 — Voshchaznikovo Analysis -->
     <article class="project fade f5">
-      <div class="project-img p2"></div>
+      <div class="project-img p2" style="background-image: url('img/project-voshchaznikovo.jpg'); background-size: cover; background-position: center;"></div>
       <div class="project-body">
         <p class="project-type">Interactive Analysis · 2024</p>
-        <h2 class="project-title">Voshchaznikovo Analysis</h2>
+        <h2 class="project-title">Voshchaznikovo Analysis <span class="project-context">Data Bootcamp · Caltech</span></h2>
         <p class="project-desc">
-          An interactive data analysis notebook exploring [your dataset description].
-          Uses Panel widgets and Bokeh charts — adjust parameters in real time and
-          see results update live.
+          An interactive notebook exploring 19th century Russian village census data.
+          Did everyone really get married at 12 and have 10 kids? Adjust parameters
+          in real time and see the results update live.
         </p>
         <div class="project-pills">
           <span class="pill">Python</span>
@@ -608,135 +755,82 @@
       </div>
     </article>
 
-    <!-- Project 3 — placeholder until deployed -->
-    <article class="project fade f5">
-      <div class="project-img p3"></div>
-      <div class="project-body">
-        <p class="project-type">Modelling · 2023</p>
-        <h2 class="project-title">Project Three Title</h2>
-        <p class="project-desc">
-          A short description of what this project does, what problem it solves,
-          and what's interesting about it. Link and hosting to be added once deployed.
-        </p>
-        <div class="project-pills">
-          <span class="pill">Python</span>
-          <span class="pill">Bash</span>
-          <span class="pill">FastAPI</span>
-        </div>
-      </div>
-      <div class="project-actions">
-        <a href="https://github.com/rjeeda" target="_blank" rel="noopener" class="btn btn-secondary">
-          GitHub
-        </a>
-      </div>
-    </article>
-
   </div>
 
   <!-- PUBLICATIONS -->
   <div id="publications">
     <div class="section-header">
       <span class="section-title">Publications &amp; writing</span>
-      <a href="https://scholar.google.com" target="_blank" rel="noopener" class="section-action">Google Scholar →</a>
+      <a href="https://scholar.google.com/citations?user=Xg7RmvkAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" class="section-action">Google Scholar →</a>
     </div>
 
-    <a href="#" class="pub">
-      <span class="pub-year">2024</span>
+    <a href="https://link.springer.com/article/10.1038/s44320-026-00202-z" target="_blank" rel="noopener" class="pub">
+      <span class="pub-year">2026</span>
       <div class="pub-body">
-        <p class="pub-venue">Journal Name · Peer reviewed</p>
-        <h3 class="pub-title">Your paper title goes here</h3>
-        <p class="pub-authors">Your Name, Co-author Name, Co-author Name</p>
+        <p class="pub-venue">Molecular Systems Biology · Peer reviewed</p>
+        <h3 class="pub-title">A universal surface functionalization technique to chemically enhance live microbial cells</h3>
+        <p class="pub-authors">Gabriel T Vercelli, Xingcheng Zhou, Stefany Moreno-Gámez, Rashi R Jeeda, et al.</p>
       </div>
       <span class="pub-arrow">→</span>
     </a>
 
-    <a href="#" class="pub">
-      <span class="pub-year">2023</span>
+    <a href="https://www.pnas.org/doi/abs/10.1073/pnas.2322440122" target="_blank" rel="noopener" class="pub">
+      <span class="pub-year">2025</span>
       <div class="pub-body">
-        <p class="pub-venue">Conference Name · Proceedings</p>
-        <h3 class="pub-title">Another paper or conference paper title</h3>
-        <p class="pub-authors">Your Name, Co-author Name</p>
+        <p class="pub-venue">PNAS · Peer reviewed</p>
+        <h3 class="pub-title">Competition for shared resources increases dependence on initial population size during coalescence of gut microbial communities</h3>
+        <p class="pub-authors">Doran A. Goldman, Katherine S. Xue, Autumn B. Parrott, Rashi R. Jeeda, et al.</p>
       </div>
       <span class="pub-arrow">→</span>
     </a>
 
-    <a href="#" class="pub">
+    <a href="https://sciencepolicyreview.org/2023/08/mitspr-191618004027/" target="_blank" rel="noopener" class="pub">
       <span class="pub-year">2023</span>
       <div class="pub-body">
-        <p class="pub-venue">Towards Data Science · Article</p>
-        <h3 class="pub-title">A blog post or article title</h3>
-        <p class="pub-authors">Your Name</p>
+        <p class="pub-venue">MIT Science Policy Review · Interview</p>
+        <h3 class="pub-title">An interview with Dr. Emma J. Rosi: On ecosystem effects of pharmaceutical contamination</h3>
+        <p class="pub-authors">Rashi Jeeda, Prachetas Jai Patel</p>
       </div>
       <span class="pub-arrow">→</span>
     </a>
 
   </div>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="about-left">
-      <h2 class="about-heading">About</h2>
-      <p class="about-text">
-        Write a short paragraph about yourself here — your research focus,
-        what drives you, and what kinds of problems you find most interesting.
-        This is the place to add a bit of personality beyond the CV.
-      </p>
-      <p class="about-text" style="margin-top: 16px;">
-        You can add a second paragraph here about your broader interests,
-        collaborations you're open to, or what you're currently working on.
-      </p>
-      <div style="margin-top: 28px;">
-        <a href="your-cv.pdf" target="_blank" rel="noopener" class="btn btn-secondary" style="display: inline-flex;">
-          Download CV
-        </a>
-      </div>
-    </div>
-    <div class="about-divider"></div>
-    <div class="about-right">
-      <h2 class="about-heading" style="margin-bottom: 4px;">Experience</h2>
-      <div style="margin-top: 16px;">
-        <div class="cv-entry">
-          <span class="cv-year">2024–</span>
-          <div>
-            <p class="cv-role">Current Role / Position</p>
-            <p class="cv-org">Institution or Company · Location</p>
-          </div>
-        </div>
-        <div class="cv-entry">
-          <span class="cv-year">2022–24</span>
-          <div>
-            <p class="cv-role">Previous Role</p>
-            <p class="cv-org">Institution or Company · Location</p>
-          </div>
-        </div>
-        <div class="cv-entry">
-          <span class="cv-year">2019–22</span>
-          <div>
-            <p class="cv-role">PhD, Your Field</p>
-            <p class="cv-org">University Name · Location</p>
-          </div>
-        </div>
-        <div class="cv-entry">
-          <span class="cv-year">2015–19</span>
-          <div>
-            <p class="cv-role">BSc / MSc, Your Field</p>
-            <p class="cv-org">University Name · Location</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
-    <span class="footer-name">Your Name</span>
+    <span class="footer-name">Rashi Jeeda</span>
     <div class="footer-links">
       <a href="https://github.com/rjeeda" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://scholar.google.com/citations?user=Xg7RmvkAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
       <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:you@email.com">Email</a>
+      <a href="mailto:rjeeda@mit.edu">Email</a>
     </div>
+    <span style="font-size: 11px; color: var(--ink-light); letter-spacing: 0.03em;">Made in 2026 with the help of <a href="https://claude.ai" target="_blank" rel="noopener" style="color: var(--ink-light); text-decoration: none; border-bottom: 0.5px solid var(--border);">Claude</a></span>
   </footer>
 
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+
+    // Check saved preference or system preference
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = saved === 'dark' || (!saved && prefersDark);
+    if (isDark) { root.setAttribute('data-theme', 'dark'); toggle.textContent = '☀️'; }
+    else { root.setAttribute('data-theme', 'light'); toggle.textContent = '🌙'; }
+
+    toggle.addEventListener('click', () => {
+      const currentlyDark = root.getAttribute('data-theme') === 'dark';
+      if (currentlyDark) {
+        root.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        toggle.textContent = '🌙';
+      } else {
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        toggle.textContent = '☀️';
+      }
+    });
+  </script>
 </body>
 </html>
