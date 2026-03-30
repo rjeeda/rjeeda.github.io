@@ -152,9 +152,11 @@
       overflow: hidden;
       background: var(--bg-dark);
     }
-    .video-wrap video {
+    .video-wrap iframe {
       width: 100%;
+      aspect-ratio: 16 / 9;
       display: block;
+      border: none;
     }
 
     footer {
@@ -230,10 +232,7 @@
     <p class="section-label">Demo</p>
 
     <div class="video-wrap">
-      <video controls playsinline>
-        <source src="img/tool_compounds_demo.mov" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <iframe src="https://www.youtube.com/embed/_8qZu-rM9rk" title="Pharmaceutical Target Identification Demo" allowfullscreen></iframe>
     </div>
   </div>
 
