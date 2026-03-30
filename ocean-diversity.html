@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drivers of Ocean Microbiome Diversity — Rashi Jeeda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #faf7f2;
+      --bg-muted:    #f2ede4;
+      --bg-dark:     #e8e1d5;
+      --border:      #cec5b5;
+      --ink:         #0f0c09;
+      --ink-mid:     #4a3f32;
+      --ink-light:   #7a6a58;
+      --amber:       #9a5f0a;
+      --amber-light: #faeeda;
+      --amber-dark:  #3a1e00;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg:          #16130f;
+        --bg-muted:    #1e1a14;
+        --bg-dark:     #26211a;
+        --border:      #3a3228;
+        --ink:         #f0ebe3;
+        --ink-mid:     #b8a898;
+        --ink-light:   #7a6a58;
+        --amber:       #e09a3a;
+        --amber-light: #2e1f08;
+        --amber-dark:  #faeeda;
+      }
+      :root:not([data-theme="light"]) nav { background: rgba(22, 19, 15, 0.94); }
+    }
+    :root[data-theme="dark"] {
+      --bg:          #16130f;
+      --bg-muted:    #1e1a14;
+      --bg-dark:     #26211a;
+      --border:      #3a3228;
+      --ink:         #f0ebe3;
+      --ink-mid:     #b8a898;
+      --ink-light:   #7a6a58;
+      --amber:       #e09a3a;
+      --amber-light: #2e1f08;
+      --amber-dark:  #faeeda;
+    }
+    :root[data-theme="dark"] nav { background: rgba(22, 19, 15, 0.94); }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 56px;
+      background: rgba(250, 247, 242, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav-name {
+      font-family: 'Lora', serif; font-size: 16px;
+      color: var(--ink); text-decoration: none;
+    }
+    .nav-back {
+      font-size: 14px; color: var(--ink-light);
+      text-decoration: none; border-bottom: 0.5px solid var(--border);
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--ink); }
+    .theme-toggle {
+      background: none; border: 0.5px solid var(--border); border-radius: 2px;
+      color: var(--ink-light); cursor: pointer; padding: 6px 10px;
+      font-size: 14px; line-height: 1;
+    }
+    .theme-toggle:hover { background: var(--bg-dark); color: var(--ink); }
+
+    .page {
+      max-width: 800px;
+      margin: 64px auto;
+      padding: 0 32px;
+    }
+
+    .eyebrow {
+      font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ink-light); margin-bottom: 12px;
+    }
+    h1 {
+      font-family: 'Lora', serif; font-size: 32px; font-weight: 400;
+      line-height: 1.25; margin-bottom: 24px;
+    }
+    .pills {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;
+    }
+    .pill {
+      font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 4px 10px; border: 0.5px solid var(--border);
+      border-radius: 2px; color: var(--ink-light);
+    }
+    .description {
+      font-size: 16px; color: var(--ink-mid); line-height: 1.8;
+      margin-bottom: 48px;
+      border-left: 2px solid var(--amber);
+      padding-left: 20px;
+    }
+    .section-label {
+      font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 10px; margin-top: 48px;
+    }
+    .body-text {
+      font-size: 15px; color: var(--ink-mid); line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .feature-list {
+      padding-left: 18px; list-style: disc; margin-bottom: 16px;
+    }
+    .feature-list li {
+      font-size: 15px; color: var(--ink-mid); line-height: 1.8; margin-bottom: 4px;
+    }
+    .divider {
+      border: none; border-top: 0.5px solid var(--border); margin: 40px 0;
+    }
+    .btn {
+      display: inline-block; font-size: 13px; padding: 10px 20px;
+      border-radius: 2px; text-decoration: none; transition: background 0.2s, color 0.2s;
+    }
+    .btn-primary {
+      background: var(--ink); color: var(--bg);
+    }
+    .btn-primary:hover { background: var(--amber); }
+    .btn-secondary {
+      border: 0.5px solid var(--border); color: var(--ink-mid);
+    }
+    .btn-secondary:hover { background: var(--bg-dark); color: var(--ink); }
+    .actions { display: flex; gap: 12px; margin-bottom: 48px; }
+
+    .pdf-wrap {
+      width: 100%;
+      border: 0.5px solid var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+      background: var(--bg-dark);
+    }
+    .pdf-wrap iframe {
+      width: 100%;
+      height: 900px;
+      display: block;
+      border: none;
+    }
+
+    footer {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 48px;
+      border-top: 0.5px solid var(--border);
+      font-size: 12px; color: var(--ink-light);
+      margin-top: 80px;
+    }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: var(--ink-light); text-decoration: none; }
+    .footer-links a:hover { color: var(--ink); }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 24px; }
+      .page { margin: 40px auto; padding: 0 24px; }
+      h1 { font-size: 24px; }
+      .pdf-wrap iframe { height: 500px; }
+      footer { flex-direction: column; gap: 12px; padding: 20px 24px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-name">Rashi Jeeda</a>
+    <a href="index.html#projects" class="nav-back">← Back to projects</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+  </nav>
+
+  <div class="page">
+    <p class="eyebrow">Bioinformatics &amp; Machine Learning · 2023</p>
+    <h1>Drivers of Ocean Microbiome Diversity</h1>
+
+    <div class="pills">
+      <span class="pill">Python</span>
+      <span class="pill">scikit-learn</span>
+      <span class="pill">scikit-bio</span>
+      <span class="pill">Random Forest</span>
+      <span class="pill">PCoA</span>
+    </div>
+
+    <p class="description">
+      Used PCoA and Random Forest modeling on the Tara Oceans dataset — 139 globally sampled
+      ocean microbiomes — to identify depth and temperature as the strongest drivers of community
+      composition. Compared taxonomic vs. functional abundance as environmental predictors and
+      surfaced biological markers for specific oceanic conditions.
+    </p>
+
+    <div class="actions">
+      <a href="https://github.com/rjeeda/20440_TARA" target="_blank" rel="noopener" class="btn btn-primary">GitHub →</a>
+    </div>
+
+    <p class="section-label">Background</p>
+    <p class="body-text">
+      Earth's oceans are a vast reservoir of microbial diversity, and oceanic microbes play crucial roles
+      in global carbon and nutrient cycling. Yet the environmental factors driving changes in these communities
+      are not well understood — particularly in deeper ocean layers, where data is sparse compared to surface ecosystems.
+    </p>
+    <p class="body-text">
+      This project analyzed the Tara Oceans dataset, the most comprehensive global survey of ocean microbiome
+      composition to date. For each of 139 samples, both taxonomic (16S rRNA OTU) and functional (eggNOG gene family)
+      abundance data were available alongside environmental metadata including depth, temperature, salinity,
+      oxygen, and nutrient concentrations.
+    </p>
+
+    <hr class="divider">
+
+    <p class="section-label">Key questions</p>
+    <ul class="feature-list">
+      <li>Do the same environmental factors drive variation in both taxonomic and functional composition?</li>
+      <li>How does the relationship between taxonomic and functional richness change across environmental gradients?</li>
+      <li>Which specific taxa or functional genes are most associated with particular oceanic conditions?</li>
+    </ul>
+
+    <hr class="divider">
+
+    <p class="section-label">Approach &amp; findings</p>
+    <p class="body-text">
+      PCoA on taxonomic abundances revealed that depth and temperature were the dominant drivers of community structure,
+      while PCoA on functional abundances pointed instead to longitude and latitude — suggesting geographic specialization
+      shapes function differently than taxonomy.
+    </p>
+    <p class="body-text">
+      Random Forest models confirmed depth and temperature as the most predictable variables from both data types,
+      with taxonomic inputs outperforming functional inputs overall. Richness analysis showed that while taxonomic
+      richness varies considerably across depth and temperature gradients, functional richness stays comparatively
+      stable — implying that key functions are maintained even as community membership shifts.
+    </p>
+    <p class="body-text">
+      Feature importance analysis surfaced specific biological markers: the SAR324 clade was present almost
+      exclusively in anaerobic conditions, two transcriptional regulators appeared only in deep oxygen minimum zones,
+      and Acidobacteria were enriched at high nitrate concentrations — prompting new hypotheses about their role
+      in marine nitrogen cycling.
+    </p>
+
+    <hr class="divider">
+
+    <p class="section-label">Full report</p>
+
+    <div class="pdf-wrap">
+      <iframe src="jeeda_rashi_final_report.pdf" title="Ocean Microbiome Diversity Report"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <span>Rashi Jeeda</span>
+    <div class="footer-links">
+      <a href="https://github.com/rjeeda" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=Xg7RmvkAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:rjeeda@mit.edu">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = saved === 'dark' || (!saved && prefersDark);
+    if (isDark) { root.setAttribute('data-theme', 'dark'); toggle.textContent = '☀️'; }
+    else { root.setAttribute('data-theme', 'light'); toggle.textContent = '🌙'; }
+    toggle.addEventListener('click', () => {
+      const currentlyDark = root.getAttribute('data-theme') === 'dark';
+      if (currentlyDark) {
+        root.setAttribute('data-theme', 'light');
+        toggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      } else {
+        root.setAttribute('data-theme', 'dark');
+        toggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+</body>
+</html>
