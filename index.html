@@ -523,6 +523,17 @@
       color: var(--ink);
       line-height: 1.5;
     }
+    .cv-bullets {
+      margin-top: 8px;
+      padding-left: 16px;
+      list-style: disc;
+    }
+    .cv-bullets li {
+      font-size: 13px;
+      color: var(--ink-light);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
     .cv-org {
       font-size: 14px;
       color: var(--ink-mid);
@@ -589,7 +600,7 @@
       <li><a href="#about">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="Rashi-Jeeda-Resume.pdf" target="_blank" rel="noopener">CV</a></li>
       <li><a href="mailto:rjeeda@mit.edu" class="nav-contact">Contact</a></li>
     </ul>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
@@ -610,7 +621,8 @@
           I'm a quantitative scientist with deep experience in Bioengineering. However, in my work,
           I've found that <strong style="color: var(--amber); font-weight: 600;">what compels me most is data science</strong>: going from messy tables
           to scientific insight. I really enjoy the process of communicating through data and visualizations,
-          and am curious about how to best approach these questions in the new AI age.
+          and am deeply curious about how generative AI works and how it changes the way we build things —
+          this website itself was built with Claude.
           I've taken this skill beyond biology into industry, and I'm eager to keep exploring
           new application areas.
         </p>
@@ -618,9 +630,8 @@
       <div class="fade f3" style="margin-top: 20px;">
         <p class="hero-bio" style="font-size: 12px; color: var(--ink-light); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400;">I'm excited about</p>
         <ul style="margin-top: 8px; padding-left: 18px; list-style: disc;">
-          <li class="hero-bio" style="font-size: 14px; margin-bottom: 6px;">Making interactive visualizations of high dimensional data</li>
+          <li class="hero-bio" style="font-size: 14px; margin-bottom: 6px;">Finding statistical insights in diverse data and communicating them through interactive visualizations</li>
           <li class="hero-bio" style="font-size: 14px; margin-bottom: 6px;">Communicating with others to understand their data needs</li>
-          <li class="hero-bio" style="font-size: 14px; margin-bottom: 6px;">Finding statistical insights in diverse types of data</li>
           <li class="hero-bio" style="font-size: 14px;">Learning how to best use AI to make interactive data tools (currently playing with CLAUDE.md files, skills, and planning mode)</li>
         </ul>
       </div>
@@ -689,6 +700,11 @@
         <div>
           <p class="cv-role">PhD / SM, Biological Engineering</p>
           <p class="cv-org">Massachusetts Institute of Technology · Cambridge, MA</p>
+          <ul class="cv-bullets">
+            <li>Built Python tools integrating APIs, ML pipelines, and image analysis workflows across diverse biological datasets</li>
+            <li>Used AI to develop interactive data applications for pharmaceutical target identification and experimental analysis</li>
+            <li>Designed experimental workflows for quantitative microbiology research; communicated findings to broad scientific audiences</li>
+          </ul>
         </div>
       </div>
       <div class="cv-entry">
@@ -696,6 +712,10 @@
         <div>
           <p class="cv-role">Data Science Intern</p>
           <p class="cv-org"><a href="https://sigmasquared.io/" target="_blank" rel="noopener" style="color: var(--ink-mid); text-decoration: none; border-bottom: 0.5px solid var(--border);">Sigma Squared</a> · Cambridge, MA</p>
+          <ul class="cv-bullets">
+            <li>Audited and reconciled 100k+ record client datasets, redesigning ingestion and validation pipelines for three enterprise clients</li>
+            <li>Used AI to build and deploy a Streamlit app for dataset comparison, enabling non-technical team members to independently validate data</li>
+          </ul>
         </div>
       </div>
       <div class="cv-entry">
@@ -703,6 +723,10 @@
         <div>
           <p class="cv-role">Bachelor's, Bioengineering</p>
           <p class="cv-org">California Institute of Technology · Pasadena, CA</p>
+          <ul class="cv-bullets">
+            <li>Co-developed a Python package for transparent, explainable analysis of biological experimental data</li>
+            <li>Led an ML pipeline using large-scale RNA-seq datasets for genomic analysis</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -744,7 +768,7 @@
 
     <!-- Project 3 — Pharma Target ID Tool -->
     <article class="project fade f5">
-      <div class="project-img p3" style="background-image: url('img/project-pharma.jpg'); background-size: cover; background-position: center; position: relative; cursor: pointer;" onclick="this.innerHTML='<video autoplay loop muted playsinline style=\'width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0\'><source src=\'img/tool_compounds_demo.mov\' type=\'video/mp4\'></video>'"></div>
+      <div class="project-img p3" style="background-image: url('img/project-pharma.jpg'); background-size: cover; background-position: center;"></div>
       <div class="project-body">
         <p class="project-type">API Data Aggregation &amp; Visualization · 2025</p>
         <h2 class="project-title">Pharmaceutical Target Identification <span class="project-context">Built with AI · Personal Project</span></h2>
@@ -762,6 +786,36 @@
         </div>
       </div>
       <div class="project-actions">
+        <a href="pharma-tool.html" class="btn btn-primary">
+          View project →
+        </a>
+      </div>
+    </article>
+
+    <!-- Project 4 — Tara Oceans -->
+    <article class="project fade f5">
+      <div class="project-img p3" style="background-image: url('img/report_cover.png'); background-size: cover; background-position: center;"></div>
+      <div class="project-body">
+        <p class="project-type">Bioinformatics &amp; Machine Learning · 2023</p>
+        <h2 class="project-title">Drivers of Ocean Microbiome Diversity <span class="project-context">Computational Biology · MIT</span></h2>
+        <p class="project-desc">
+          Used PCoA and Random Forest modeling on the Tara Oceans dataset — 139 globally sampled
+          ocean microbiomes — to identify depth and temperature as the strongest drivers of community
+          composition. Compared taxonomic vs. functional abundance as environmental predictors and
+          surfaced biological markers for specific oceanic conditions.
+        </p>
+        <div class="project-pills">
+          <span class="pill">Python</span>
+          <span class="pill">scikit-learn</span>
+          <span class="pill">scikit-bio</span>
+          <span class="pill">Random Forest</span>
+          <span class="pill">PCoA</span>
+        </div>
+      </div>
+      <div class="project-actions">
+        <a href="https://github.com/rjeeda/20440_TARA" target="_blank" rel="noopener" class="btn btn-primary">
+          GitHub →
+        </a>
       </div>
     </article>
 
@@ -798,7 +852,7 @@
   </div>
 
   <!-- PUBLICATIONS -->
-  <div id="publications">
+  <div id="publications" style="margin-top: 48px;">
     <div class="section-header">
       <span class="section-title">Publications &amp; writing</span>
       <a href="https://scholar.google.com/citations?user=Xg7RmvkAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" class="section-action">Google Scholar →</a>
